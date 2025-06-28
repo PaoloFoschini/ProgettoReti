@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    color: #666;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 400px;
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px auto;
+    display: block;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    margin: 15px 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+p {
+    margin: 15px auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+div, section {
+    text-align: center;
+    margin: 20px auto;
+}
+
+button, .button {
+    transform: scale(1.5);
+    margin: 20px;
+}
+
+.index { background-color: #f0ebe5; }
+.iceland { background-color: #e6f3ff; }
+.lofoten { background-color: #e8f5e8; }
+.croatia { background-color: #fff8e1; }
