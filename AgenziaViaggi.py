@@ -5,10 +5,20 @@ import sys, signal
 import http.server
 import socketserver
 
-server = socketserver.ThreadingTCPServer(('', 8080), http.server.SimpleHTTPRequestHandler)
+import http.server
+
+class CustomRequestHandler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/':
+            self.send_response(301)
+            self.send_header('Location', '/www/index.html')
+            self.end_headers()
+        else:
+            super().do_GET()
+
+server = socketserver.ThreadingTCPServer(('', 8080), CustomRequestHandler)
 
 server.daemon_threads = True  
-
 server.allow_reuse_address = True  
 
 def signal_handler(signal, frame):
